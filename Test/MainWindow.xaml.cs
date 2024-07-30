@@ -30,8 +30,7 @@ namespace Test
 
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
-            NotificationPanel.Show("Hello",InfoBarSeverity.Error);
+           
         }
     }
 }

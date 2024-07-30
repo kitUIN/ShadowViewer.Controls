@@ -5,20 +5,24 @@
     <RootNamespace>ShadowViewer.Controls</RootNamespace>
     <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
     <UseWinUI>true</UseWinUI>
+	  <Nullable>enable</Nullable>
+	  <Version>1.0.1.2</Version>
+	  <PackageId>ShadowViewer.Controls.Notification</PackageId>
+	  <Authors>kitUIN</Authors>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/kitUIN/ShadowViewer.Controls</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/kitUIN/ShadowViewer.Controls</RepositoryUrl>
+	  <Description>✨ Notification | ShadowViewer.Controls✨</Description>
+	  <Copyright>Copyright 2024-2024</Copyright>
+	  <PackageTags>kitUIN;wasdk;ShadowViewer;winui;Notification</PackageTags>
+	  <PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="TipPopup.xaml" />
-  </ItemGroup>
-
   <ItemGroup>
       <PackageReference Include="CommunityToolkit.WinUI.Animations" Version="8.0.240109" />
       <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
       <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Page Update="TipPopup.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
 </Project>

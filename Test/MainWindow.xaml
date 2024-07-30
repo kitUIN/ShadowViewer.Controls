@@ -10,19 +10,11 @@
     mc:Ignorable="d">
 
     <Grid>
-        <controls:NotificationPanel
-            x:Name="NotificationPanel"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Bottom"
-            FlowDirection="RightToLeft"
-            Orientation="Vertical"  >
-        </controls:NotificationPanel>
-        <Button
-            x:Name="myButton"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Click="myButton_Click">
-            Click Me
-        </Button>
+        <controls:TitleBorder>
+            <controls:TitleBorder.Header>
+                <Button>Header</Button>
+            </controls:TitleBorder.Header>
+            <Button>hello</Button>
+        </controls:TitleBorder>
     </Grid>
 </Window>

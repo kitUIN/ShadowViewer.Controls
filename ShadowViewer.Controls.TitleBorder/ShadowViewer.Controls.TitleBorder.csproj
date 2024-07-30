@@ -8,20 +8,20 @@
 	  <Nullable>enable</Nullable>
 	  <LangVersion>12</LangVersion>
 	  <Version>1.0.1.2</Version>
-	  <PackageId>ShadowViewer.Controls.TitleBar</PackageId>
+	  <PackageId>ShadowViewer.Controls.TitleBorder</PackageId>
 	  <Authors>kitUIN</Authors>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageProjectUrl>https://github.com/kitUIN/ShadowViewer.Controls</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/kitUIN/ShadowViewer.Controls</RepositoryUrl>
-	  <Description>✨ TitleBar | ShadowViewer.Controls✨</Description>
+	  <Description>✨ TitleBorder | ShadowViewer.Controls✨</Description>
 	  <Copyright>Copyright 2024-2024</Copyright>
-	  <PackageTags>kitUIN;wasdk;ShadowViewer;winui;titlebar</PackageTags>
+	  <PackageTags>kitUIN;wasdk;ShadowViewer;winui;TitleBorder</PackageTags>
 	  <PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-      <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
-      <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
+	  <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
   </ItemGroup>
 </Project>

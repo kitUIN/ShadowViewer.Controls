@@ -5,9 +5,11 @@ VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShadowViewer.Controls.TitleBar", "ShadowViewer.Controls.TitleBar\ShadowViewer.Controls.TitleBar.csproj", "{A627F0FA-A7D4-4EEE-9D9A-63A78BB266B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F0240A60-2E04-4CFF-A29B-ED642D5DF83D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{F0240A60-2E04-4CFF-A29B-ED642D5DF83D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowViewer.Controls.Notification", "ShadowViewer.Controls.Notification\ShadowViewer.Controls.Notification.csproj", "{BD67B2D2-D6E3-450A-95A3-53620191E019}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShadowViewer.Controls.Notification", "ShadowViewer.Controls.Notification\ShadowViewer.Controls.Notification.csproj", "{BD67B2D2-D6E3-450A-95A3-53620191E019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadowViewer.Controls.TitleBorder", "ShadowViewer.Controls.TitleBorder\ShadowViewer.Controls.TitleBorder.csproj", "{E703583B-8B4C-4AA6-98E9-737DF391DEB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,22 @@ Global
 		{BD67B2D2-D6E3-450A-95A3-53620191E019}.Release|x64.Build.0 = Release|Any CPU
 		{BD67B2D2-D6E3-450A-95A3-53620191E019}.Release|x86.ActiveCfg = Release|Any CPU
 		{BD67B2D2-D6E3-450A-95A3-53620191E019}.Release|x86.Build.0 = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|x64.Build.0 = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Debug|x86.Build.0 = Debug|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|ARM64.Build.0 = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|x64.ActiveCfg = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|x64.Build.0 = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|x86.ActiveCfg = Release|Any CPU
+		{E703583B-8B4C-4AA6-98E9-737DF391DEB4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
