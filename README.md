@@ -6,3 +6,4 @@
 
 ## 鸣谢
 [Windows Community Toolkit Labs(TitleBar)](https://github.com/CommunityToolkit/Labs-Windows/discussions/454) - 实验性社区包 - 参考了标题栏实现
+[Bili.Uwp](https://github.com/Richasy/Bili.Uwp) - 哔哩客户端 - 参考了TipPopup实现
