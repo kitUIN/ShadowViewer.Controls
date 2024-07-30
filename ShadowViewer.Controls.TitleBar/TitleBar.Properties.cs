@@ -5,6 +5,7 @@
 using System;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
 
 namespace ShadowViewer.Controls;
 
@@ -24,6 +25,11 @@ public partial class TitleBar
     /// The backing <see cref="DependencyProperty"/> for the <see cref="Subtitle"/> property.
     /// </summary>
     public static readonly DependencyProperty SubtitleProperty = DependencyProperty.Register(nameof(Subtitle), typeof(string), typeof(TitleBar), new PropertyMetadata(default(string)));
+
+    /// <summary>
+    /// The backing <see cref="DependencyProperty"/> for the <see cref="SubtitleForeground"/> property.
+    /// </summary>
+    public static readonly DependencyProperty SubtitleForegroundProperty = DependencyProperty.Register(nameof(SubtitleForeground), typeof(Brush), typeof(TitleBar), new PropertyMetadata(null, SubtitleForegroundChanged));
 
     /// <summary>
     /// The backing <see cref="DependencyProperty"/> for the <see cref="Content"/> property.
@@ -108,6 +114,14 @@ public partial class TitleBar
         set => SetValue(SubtitleProperty, value);
     }
 
+    /// <summary>
+    /// Gets or sets the Subtitle Foreground
+    /// </summary>
+    public Brush SubtitleForeground
+    {
+        get => (Brush)GetValue(SubtitleForegroundProperty);
+        set => SetValue(SubtitleForegroundProperty, value);
+    }
     /// <summary>
     /// Gets or sets the content shown at the center of the TitleBar. When setting this, using DisplayMode=Tall is recommended.
     /// </summary>
@@ -205,6 +219,14 @@ public partial class TitleBar
     private static void ContentChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         ((TitleBar)d).Update();
+    }
+    
+    private static void SubtitleForegroundChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        if (e.NewValue is not Brush brush) return;
+        var target = ((TitleBar)d);
+        if (target.GetTemplateChild("PART_SubtitleText") is not TextBlock textBlock) return;
+        textBlock.Foreground = brush;
     }
 
     private static void FooterChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
