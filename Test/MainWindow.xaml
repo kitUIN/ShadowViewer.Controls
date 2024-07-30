@@ -10,11 +10,6 @@
     mc:Ignorable="d">
 
     <Grid>
-        <controls:TitleBorder>
-            <controls:TitleBorder.Header>
-                <Button>Header</Button>
-            </controls:TitleBorder.Header>
-            <Button>hello</Button>
-        </controls:TitleBorder>
+        <controls:PluginLogo Logo="fluent://regular/\uE433" />
     </Grid>
 </Window>
