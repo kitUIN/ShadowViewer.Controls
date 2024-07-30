@@ -1,7 +1,8 @@
 # ShadowViewer.Controls
 
-- TitleBar ×Ô¶¨Òå±êÌâÀ¸,×Ô´øÒ»¸öÀúÊ·¼ÇÂ¼
+- TitleBar è‡ªå®šä¹‰æ ‡é¢˜æ ,è‡ªå¸¦ä¸€ä¸ªå†å²è®°å½•
+- Notification é€šçŸ¥å°å¼¹å‡º
 
 
-## ÃùĞ»
-[Windows Community Toolkit Labs(TitleBar)](https://github.com/CommunityToolkit/Labs-Windows/discussions/454) - ÊµÑéĞÔÉçÇø°ü - ²Î¿¼ÁË±êÌâÀ¸ÊµÏÖ
+## é¸£è°¢
+[Windows Community Toolkit Labs(TitleBar)](https://github.com/CommunityToolkit/Labs-Windows/discussions/454) - å®éªŒæ€§ç¤¾åŒºåŒ… - å‚è€ƒäº†æ ‡é¢˜æ å®ç°
