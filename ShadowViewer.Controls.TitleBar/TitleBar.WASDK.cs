@@ -5,8 +5,11 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Windows.Graphics;
+using Windows.UI;
+using CommunityToolkit.WinUI.Helpers;
 using Microsoft.UI;
 using Microsoft.UI.Input;
 using Microsoft.UI.Windowing;
@@ -23,6 +26,16 @@ namespace ShadowViewer.Controls;
 
 public partial class TitleBar
 {
+    /// <summary>
+    /// 主题变更事件
+    /// </summary>
+    public event EventHandler? ThemeChangedEvent;
+
+    public void InvokeThemeChanged(object sender)
+    {
+        ThemeChangedEvent?.Invoke(sender,EventArgs.Empty);
+    }
+
     WndProcHelper? WndProcHelper;
     MenuFlyout? MenuFlyout;
     ContentPresenter? PART_ContentPresenter;
@@ -61,6 +74,8 @@ public partial class TitleBar
             };
         }
 
+        ThemeChangedEvent -= TitleBar_ThemeChangedEvent;
+        ThemeChangedEvent += TitleBar_ThemeChangedEvent;
         PART_ContentPresenter = GetTemplateChild(nameof(PART_ContentPresenter)) as ContentPresenter;
         PART_FooterPresenter = GetTemplateChild(nameof(PART_FooterPresenter)) as ContentPresenter;
 
@@ -80,6 +95,14 @@ public partial class TitleBar
         _isAutoConfigCompleted = true;
     }
 
+    private void TitleBar_ThemeChangedEvent(object? sender, EventArgs e)
+    {
+        if (Window.Content is FrameworkElement frameworkElement)
+        {
+            UpdateCaptionButtons(frameworkElement);
+        }
+    }
+
     private void Window_SizeChanged(object sender, WindowSizeChangedEventArgs args)
     {
         UpdateVisualStateAndDragRegion(args.Size);
@@ -89,16 +112,20 @@ public partial class TitleBar
     {
         Window.AppWindow.TitleBar.ButtonBackgroundColor = Colors.Transparent;
         Window.AppWindow.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-        if (rootElement.ActualTheme == ElementTheme.Dark)
+        Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = Colors.DarkGray;
+        Window.AppWindow.TitleBar.ButtonHoverBackgroundColor = rootElement.RequestedTheme switch
         {
-            Window.AppWindow.TitleBar.ButtonForegroundColor = Colors.White;
-            Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = Colors.DarkGray;
-        }
-        else
+            ElementTheme.Dark => "#2D2D2D".ToColor(),
+            ElementTheme.Light => "#E9E9E9".ToColor(),
+            _ => null
+        };
+        Window.AppWindow.TitleBar.ButtonHoverForegroundColor = rootElement.RequestedTheme switch
         {
-            Window.AppWindow.TitleBar.ButtonForegroundColor = Colors.Black;
-            Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = Colors.DarkGray;
-        }
+            ElementTheme.Dark => Colors.White,
+            ElementTheme.Light => Colors.Black,
+            _ => null
+        };
+        Window.AppWindow.TitleBar.ButtonForegroundColor = Window.AppWindow.TitleBar.ButtonHoverForegroundColor;
     }
 
     private void ResetWASDKTitleBar()
