@@ -43,6 +43,9 @@ public sealed partial class TipPopup : UserControl
     /// </summary>
     public TipPopup() => InitializeComponent();
 
+    /// <summary>
+    /// 显示的时间
+    /// </summary>
     public double DisplaySeconds { get; set; } = 2;
     /// <summary>
     /// Initializes a new instance of the <see cref="TipPopup"/> class.
