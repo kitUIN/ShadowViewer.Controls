@@ -1,7 +1,15 @@
 # ShadowViewer.Controls
 
-- TitleBar 自定义标题栏,自带一个历史记录
-- Notification 通知小弹出
+- TitleBar ![nuget](https://img.shields.io/nuget/v/ShadowViewer.Controls.TitleBar?style=flat-square)
+  - 自定义标题栏
+- Notification ![nuget](https://img.shields.io/nuget/v/ShadowViewer.Controls.Notification?style=flat-square)
+  - 通知小弹出
+- ShadowSettingHeader ![nuget](https://img.shields.io/nuget/v/ShadowViewer.Controls.ShadowSettingHeader?style=flat-square)
+  - 设置头部
+- PluginLogo ![nuget](https://img.shields.io/nuget/v/ShadowViewer.Controls.PluginLogo?style=flat-square)
+  - 插件Logo
+- TitleBorder ![nuget](https://img.shields.io/nuget/v/ShadowViewer.Controls.TitleBorder?style=flat-square)
+  - 带TitleHeader的Border
 
 
 ## 鸣谢
