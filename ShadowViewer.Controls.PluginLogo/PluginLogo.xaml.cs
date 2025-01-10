@@ -26,7 +26,7 @@ public sealed partial class PluginLogo : UserControl
             var url = new Uri(value);
             switch (url.Scheme)
             {
-                case "ms-appx":
+                case "ms-appx" or "http" or "https":
                     BitmapIcon.Visibility = Visibility.Visible;
                     BitmapIcon.UriSource = url;
                     break;
