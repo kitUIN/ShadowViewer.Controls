@@ -14,19 +14,19 @@ public enum NotificationTipPosition
     /// <summary>
     /// 
     /// </summary>
-    Left,
+    LeftToRight,
     /// <summary>
     /// 
     /// </summary>
-    Top,
+    TopToBottom,
     /// <summary>
     /// 
     /// </summary>
-    Right,
+    RightToLeft,
     /// <summary>
     /// 
     /// </summary>
-    Bottom,
+    BottomToTop,
 }
 /// <summary>
 /// 
@@ -103,21 +103,21 @@ public sealed class NotificationPanel : StackPanel
         Vector3 from;
         switch (TipPosition)
         {
-            case NotificationTipPosition.Bottom:
+            case NotificationTipPosition.BottomToTop:
                 to = new Vector3(0, 0, 0);
                 from = new Vector3(0, 40, 0);
                 break;
-            case NotificationTipPosition.Top:
+            case NotificationTipPosition.TopToBottom:
                 to = new Vector3(0, 0, 0);
                 from = new Vector3(0, -40, 0);
                 break;
-            case NotificationTipPosition.Left:
-                to = new Vector3(0, 0, 0);
-                from = new Vector3(-40, 0, 0);
-                break;
-            case NotificationTipPosition.Right:
+            case NotificationTipPosition.LeftToRight:
                 to = new Vector3(0, 0, 0);
                 from = new Vector3(40, 0, 0);
+                break;
+            case NotificationTipPosition.RightToLeft:
+                to = new Vector3(0, 0, 0);
+                from = new Vector3(-40, 0, 0);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -150,5 +150,5 @@ public sealed class NotificationPanel : StackPanel
     /// </summary>
     public static readonly DependencyProperty TipPositionProperty =
         DependencyProperty.Register(nameof(TipPosition), typeof(NotificationTipPosition), typeof(NotificationPanel),
-            new PropertyMetadata(NotificationTipPosition.Bottom, null));
+            new PropertyMetadata(NotificationTipPosition.BottomToTop, null));
 }

@@ -21,7 +21,6 @@
             Canvas.ZIndex="1"
             FlowDirection="RightToLeft"
             Orientation="Vertical"
-            TipPosition="Bottom"
             Visibility="Collapsed" />
     </Grid>
 </Window>
