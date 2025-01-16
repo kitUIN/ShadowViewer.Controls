@@ -44,7 +44,7 @@ public sealed class NotificationPanel : StackPanel
     /// <summary>
     /// 
     /// </summary>
-    private async void Show(InfoBar popup, double displaySeconds = 2)
+    public async void Show(InfoBar popup, double displaySeconds = 2)
     {
         Visibility = Visibility.Visible;
         popup.Loaded += Popup_Loaded;
