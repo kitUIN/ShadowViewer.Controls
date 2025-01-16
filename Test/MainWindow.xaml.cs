@@ -32,5 +32,10 @@ namespace Test
         {
            
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            TipContainer.Show("≤‚ ‘info");
+        }
     }
 }

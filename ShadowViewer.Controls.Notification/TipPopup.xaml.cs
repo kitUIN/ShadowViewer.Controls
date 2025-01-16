@@ -1,7 +1,10 @@
 // Copyright (c) Richasy. All rights reserved.
 
+using System;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media.Animation;
+using System.Threading.Tasks;
 
 namespace ShadowViewer.Controls;
 
@@ -60,5 +63,24 @@ public sealed partial class TipPopup : UserControl
         DisplaySeconds = displaySeconds;
         Severity = type;
     }
+    /// <summary>
+    /// Hide
+    /// </summary>
+    public async Task Hide()
+    {
+        var fadeOutAnimation = new DoubleAnimation
+        {
+            From = 1.0,
+            To = 0,
+            Duration = new Duration(TimeSpan.FromSeconds(0.5)),
+        };
 
+        var storyboard = new Storyboard();
+        storyboard.Children.Add(fadeOutAnimation);
+        Storyboard.SetTarget(fadeOutAnimation, Bar);
+        Storyboard.SetTargetProperty(fadeOutAnimation, "Opacity");
+        storyboard.Begin();
+        await Task.Delay(500);
+        Visibility = Visibility.Collapsed;
+    }
 }

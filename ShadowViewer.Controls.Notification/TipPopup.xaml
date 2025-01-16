@@ -27,11 +27,5 @@
                 To="1.0"
                 Duration="0:0:0.5" />
         </animations:Implicit.ShowAnimations>
-        <animations:Implicit.HideAnimations>
-            <animations:OpacityAnimation
-                From="1.0"
-                To="0"
-                Duration="0:0:0.5" />
-        </animations:Implicit.HideAnimations>
     </InfoBar>
 </UserControl>
