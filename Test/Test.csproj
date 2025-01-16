@@ -11,6 +11,9 @@
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="NotificationPanelPage.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -37,6 +40,11 @@
   <ItemGroup>
     <ProjectReference Include="..\ShadowViewer.Controls.Notification\ShadowViewer.Controls.Notification.csproj" />
 
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="NotificationPanelPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <!-- 

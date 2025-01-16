@@ -12,8 +12,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using ShadowViewer.Controls;
-using InfoBar = Microsoft.UI.Xaml.Controls.InfoBar;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -21,24 +19,13 @@ using InfoBar = Microsoft.UI.Xaml.Controls.InfoBar;
 namespace Test
 {
     /// <summary>
-    /// An empty window that can be used on its own or navigated to within a Frame.
+    /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class NotificationPanelPage : Page
     {
-        public MainWindow()
+        public NotificationPanelPage()
         {
             this.InitializeComponent();
-        }
-
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-
-            TipContainerCenter.Show("≤‚ ‘info");
         }
     }
 }

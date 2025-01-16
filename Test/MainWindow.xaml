@@ -9,17 +9,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="Top" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
             <Button Click="ButtonBase_OnClick">测试info</Button>
         </StackPanel>
         <controls:NotificationPanel
-            x:Name="TipContainer"
+            x:Name="TipContainerCenter"
+            Margin="0,0,0,52"
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
             Canvas.ZIndex="1"
             FlowDirection="RightToLeft"
             Orientation="Vertical"
+            TipPosition="Bottom"
             Visibility="Collapsed" />
     </Grid>
 </Window>
