@@ -61,7 +61,6 @@ public sealed class NotificationPanel : StackPanel
         popup.Loaded += (sender, _) => ShowTip(sender as InfoBar);
         if (displaySeconds <= 0 || popup.IsClosable)
         {
-            popup.IsClosable = true;
             popup.CloseButtonClick += Popup_CloseButtonClick;
         }
 
