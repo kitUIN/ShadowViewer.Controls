@@ -1,4 +1,4 @@
-using Microsoft.UI.Xaml;
+ï»¿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -14,6 +14,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using ShadowViewer.Controls;
 using InfoBar = Microsoft.UI.Xaml.Controls.InfoBar;
+using static System.Net.Mime.MediaTypeNames;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,20 +38,44 @@ namespace Test
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            TipContainerCenter.Show("²âÊÔsuccess",InfoBarSeverity.Success);
+            TipContainerCenter.Notify("æµ‹è¯•success",InfoBarSeverity.Success);
         }
 
         private void ButtonBase_OnClick2(object sender, RoutedEventArgs e)
         {
-            TipContainerCenter.Show("²âÊÔInfo", InfoBarSeverity.Informational);
+            TipContainerCenter.Notify("æµ‹è¯•Info", InfoBarSeverity.Informational);
         }
         private void ButtonBase_OnClick3(object sender, RoutedEventArgs e)
         {
-            TipContainerCenter.Show("²âÊÔWarn", InfoBarSeverity.Warning);
+            TipContainerCenter.Notify("æµ‹è¯•Warné•¿é•¿çš„", InfoBarSeverity.Warning);
         }
         private void ButtonBase_OnClick4(object sender, RoutedEventArgs e)
         {
-            TipContainerCenter.Show("²âÊÔError", InfoBarSeverity.Error);
+            TipContainerCenter.Notify("æµ‹è¯•Error", InfoBarSeverity.Error);
+        }
+
+        private void ButtonBase_OnClick5(object sender, RoutedEventArgs e)
+        {
+            TipContainerCenter.Notify(new InfoBar
+            {
+                Message = "Test",
+                Severity = InfoBarSeverity.Error,
+                IsClosable = false,
+                IsIconVisible = true,
+                IsOpen = true,
+                Content = new Grid()
+                {
+                  Children  =
+                  {
+                      new ProgressBar()
+                      {
+                          IsIndeterminate = true
+                      }
+                  }
+                },
+                HorizontalAlignment = HorizontalAlignment.Center,
+                FlowDirection = FlowDirection.LeftToRight
+            }, displaySeconds:0);
         }
     }
 }

@@ -1,22 +1,23 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Window
     x:Class="Test.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="using:ShadowViewer.Controls"
+    xmlns:scontrols="using:ShadowViewer.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:Test"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid x:Name="Top" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+     
+    <Grid x:Name="Top" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"> 
         <StackPanel>
             <Button Click="ButtonBase_OnClick">测试success</Button>
             <Button Click="ButtonBase_OnClick2">测试info</Button>
             <Button Click="ButtonBase_OnClick3">测试warn</Button>
             <Button Click="ButtonBase_OnClick4">测试error</Button>
+            <Button Click="ButtonBase_OnClick5">测试可关闭通知</Button>
         </StackPanel>
-        <controls:NotificationPanel
+        <scontrols:NotificationPanel
             x:Name="TipContainerCenter"
             Margin="0,0,0,52"
             HorizontalAlignment="Center"

@@ -7,7 +7,7 @@
 	  <UseWinUI>true</UseWinUI>
 	  <Nullable>enable</Nullable>
 	  <LangVersion>12</LangVersion>
-	  <Version>1.1.2</Version>
+	  <Version>1.1.4</Version>
 	  <PackageId>ShadowViewer.Controls.Notification</PackageId>
 	  <Authors>kitUIN</Authors>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -15,10 +15,11 @@
 	  <PackageProjectUrl>https://github.com/kitUIN/ShadowViewer.Controls</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/kitUIN/ShadowViewer.Controls</RepositoryUrl>
 	  <Description>✨ Notification | ShadowViewer.Controls✨</Description>
-	  <Copyright>Copyright 2024-2024</Copyright>
+	  <Copyright>Copyright 2024-2025</Copyright>
 	  <PackageTags>kitUIN;wasdk;ShadowViewer;winui;Notification</PackageTags>
 	  <PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
       <PackageReference Include="CommunityToolkit.WinUI.Animations" Version="8.0.240109" />
@@ -27,5 +28,8 @@
   </ItemGroup>
 	<ItemGroup>
 		<None Include="$(OutputPath)\**\*.xbf" Pack="true" PackagePath="lib\net6.0-windows10.0.19041\" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include=".\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 </Project>
