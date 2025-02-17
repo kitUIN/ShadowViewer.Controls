@@ -11,7 +11,10 @@
 
     <Grid x:Name="Top" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <Button Click="ButtonBase_OnClick">测试info</Button>
+            <Button Click="ButtonBase_OnClick">测试success</Button>
+            <Button Click="ButtonBase_OnClick2">测试info</Button>
+            <Button Click="ButtonBase_OnClick3">测试warn</Button>
+            <Button Click="ButtonBase_OnClick4">测试error</Button>
         </StackPanel>
         <controls:NotificationPanel
             x:Name="TipContainerCenter"

@@ -37,8 +37,20 @@ namespace Test
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
+            TipContainerCenter.Show("≤‚ ‘success",InfoBarSeverity.Success);
+        }
 
-            TipContainerCenter.Show("≤‚ ‘info");
+        private void ButtonBase_OnClick2(object sender, RoutedEventArgs e)
+        {
+            TipContainerCenter.Show("≤‚ ‘Info", InfoBarSeverity.Informational);
+        }
+        private void ButtonBase_OnClick3(object sender, RoutedEventArgs e)
+        {
+            TipContainerCenter.Show("≤‚ ‘Warn", InfoBarSeverity.Warning);
+        }
+        private void ButtonBase_OnClick4(object sender, RoutedEventArgs e)
+        {
+            TipContainerCenter.Show("≤‚ ‘Error", InfoBarSeverity.Error);
         }
     }
 }
