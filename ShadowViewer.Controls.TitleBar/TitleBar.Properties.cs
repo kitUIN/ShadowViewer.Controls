@@ -50,6 +50,10 @@ public partial class TitleBar
     /// The backing <see cref="DependencyProperty"/> for the <see cref="IsPaneButtonVisible"/> property.
     /// </summary>
     public static readonly DependencyProperty IsPaneButtonVisibleProperty = DependencyProperty.Register(nameof(IsPaneButtonVisible), typeof(bool), typeof(TitleBar), new PropertyMetadata(false, IsPaneButtonVisibleChanged));
+    /// <summary>
+    /// The backing <see cref="DependencyProperty"/> for the <see cref="IsHistoryButtonVisible"/> property.
+    /// </summary>
+    public static readonly DependencyProperty IsHistoryButtonVisibleProperty = DependencyProperty.Register(nameof(IsHistoryButtonVisible), typeof(bool), typeof(TitleBar), new PropertyMetadata(false, IsHistoryVisibleChanged));
 
     /// <summary>
     /// The backing <see cref="DependencyProperty"/> for the <see cref="DisplayMode"/> property.
@@ -175,6 +179,15 @@ public partial class TitleBar
     }
 
     /// <summary>
+    /// Gets or sets the visibility of the history.
+    /// </summary>
+    public bool IsHistoryButtonVisible
+    {
+        get => (bool)GetValue(IsHistoryButtonVisibleProperty);
+        set => SetValue(IsHistoryButtonVisibleProperty, value);
+    }
+
+    /// <summary>
     /// Gets or sets the breakpoint of when the compact state is triggered.
     /// </summary>
     public int CompactStateBreakpoint
@@ -207,6 +220,11 @@ public partial class TitleBar
     }
 
     private static void IsPaneButtonVisibleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        ((TitleBar)d).Update();
+    }
+
+    private static void IsHistoryVisibleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         ((TitleBar)d).Update();
     }

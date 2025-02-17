@@ -131,6 +131,15 @@
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
+                            <VisualStateGroup x:Name="HistoryButtonStates">
+                                <VisualState x:Name="HistoryButtonVisible" />
+                                <VisualState x:Name="HistoryButtonCollapsed">
+                                    <VisualState.Setters>
+                                        <Setter Target="PART_HistoryButton.Visibility" Value="Collapsed" />
+                                        <Setter Target="PART_HistoryButton.Visibility" Value="Collapsed" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
                             <VisualStateGroup x:Name="PaneButtonStates">
                                 <VisualState x:Name="PaneButtonVisible" />
                                 <VisualState x:Name="PaneButtonCollapsed">

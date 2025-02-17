@@ -11,6 +11,8 @@ namespace ShadowViewer.Controls;
 [TemplateVisualState(Name = BackButtonCollapsedState, GroupName = BackButtonStates)]
 [TemplateVisualState(Name = PaneButtonVisibleState, GroupName = PaneButtonStates)]
 [TemplateVisualState(Name = PaneButtonCollapsedState, GroupName = PaneButtonStates)]
+[TemplateVisualState(Name = HistoryButtonVisibleState, GroupName = HistoryButtonStates)]
+[TemplateVisualState(Name = HistoryButtonCollapsedState, GroupName = HistoryButtonStates)]
 [TemplateVisualState(Name = WindowActivatedState, GroupName = ActivationStates)]
 [TemplateVisualState(Name = WindowDeactivatedState, GroupName = ActivationStates)]
 [TemplateVisualState(Name = StandardState, GroupName = DisplayModeStates)]
@@ -41,6 +43,10 @@ public partial class TitleBar : Control
     private const string PaneButtonVisibleState = "PaneButtonVisible";
     private const string PaneButtonCollapsedState = "PaneButtonCollapsed";
     private const string PaneButtonStates = "PaneButtonStates";
+
+    private const string HistoryButtonVisibleState = "HistoryButtonVisible";
+    private const string HistoryButtonCollapsedState = "HistoryButtonCollapsed";
+    private const string HistoryButtonStates = "HistoryButtonStates";
 
     private const string WindowActivatedState = "Activated";
     private const string WindowDeactivatedState = "Deactivated";
@@ -173,6 +179,7 @@ public partial class TitleBar : Control
 
         VisualStateManager.GoToState(this, IsBackButtonVisible ? BackButtonVisibleState : BackButtonCollapsedState, true);
         VisualStateManager.GoToState(this, IsPaneButtonVisible ? PaneButtonVisibleState : PaneButtonCollapsedState, true);
+        VisualStateManager.GoToState(this, IsHistoryButtonVisible ? HistoryButtonVisibleState : HistoryButtonCollapsedState, true);
 
         VisualStateManager.GoToState(this, DisplayMode == DisplayMode.Tall ? TallState : StandardState, true);
 
