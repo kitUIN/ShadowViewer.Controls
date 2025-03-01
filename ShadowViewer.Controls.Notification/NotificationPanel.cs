@@ -7,6 +7,7 @@ using CommunityToolkit.WinUI.Animations;
 using Microsoft.UI.Xaml;
 using System.Reflection;
 using Microsoft.UI.Xaml.Controls.Primitives;
+using ShadowViewer.Controls.Extensions;
 
 namespace ShadowViewer.Controls;
 
@@ -63,11 +64,9 @@ public sealed class NotificationPanel : StackPanel
         {
             popup.CloseButtonClick += Popup_CloseButtonClick;
         }
-
         Children.Add(popup);
         if ((displaySeconds <= 0)) return;
-        await Task.Delay(TimeSpan.FromSeconds(displaySeconds));
-        Popup_CloseButtonClick(popup, null);
+        await popup.Close(displaySeconds);
     }
 
     /// <summary>
@@ -76,17 +75,9 @@ public sealed class NotificationPanel : StackPanel
     /// <param name="popup">通知控件</param>
     /// <param name="args"></param>
     // ReSharper disable once AsyncVoidMethod
-    private async void Popup_CloseButtonClick(InfoBar popup, object? args)
+    private static async void Popup_CloseButtonClick(InfoBar popup, object? args)
     {
-        await AnimationBuilder.Create()
-            .Opacity(
-                to: 0,
-                from: 1.0,
-                duration: TimeSpan.FromSeconds(0.5))
-            .StartAsync(popup);
-        popup.Visibility = Visibility.Collapsed;
-        Children.Remove(popup);
-        if (Children.Count == 0) Visibility = Visibility.Collapsed;
+        await popup.Close();
     }
 
     /// <summary>
