@@ -26,13 +26,13 @@
             x:Name="FluentRegularIcon"
             Width="{Binding ElementName=Top, Path=ActualWidth}"
             Height="{Binding ElementName=Top, Path=ActualHeight}"
-            FontSize="{Binding ElementName=Top, Path=FontSize}"
+            AutoFontSize="{x:Bind FontIconSize}"
             Visibility="Collapsed" />
         <fluentIcon:FluentFilledIcon
             x:Name="FluentFilledIcon"
             Width="{Binding ElementName=Top, Path=ActualWidth}"
             Height="{Binding ElementName=Top, Path=ActualHeight}"
-            FontSize="{Binding ElementName=Top, Path=FontSize}"
+            AutoFontSize="{x:Bind FontIconSize}"
             Visibility="Collapsed" />
     </Grid>
 </UserControl>
