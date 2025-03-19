@@ -1,5 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using ShadowViewer.Controls;
 using InfoBar = Microsoft.UI.Xaml.Controls.InfoBar;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -19,7 +20,7 @@ namespace Test
 
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            ((PingButton)sender).State = PingButtonState.Ping;
         }
 
         // private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
