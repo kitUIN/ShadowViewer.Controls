@@ -39,7 +39,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShadowViewer.Controls.Notification\ShadowViewer.Controls.Notification.csproj" />
-    <ProjectReference Include="..\ShadowViewer.Controls.PluginLogo\ShadowViewer.Controls.PluginLogo.csproj" />
 
   </ItemGroup>
   <ItemGroup>

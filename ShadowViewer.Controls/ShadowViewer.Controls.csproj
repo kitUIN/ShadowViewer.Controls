@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-windows10.0.17763.0;net8.0-windows10.0.17763.0;net9.0-windows10.0.17763.0</TargetFrameworks>
+		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<RootNamespace>ShadowViewer.Controls</RootNamespace>
+		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+		<UseWinUI>true</UseWinUI>
+		<Nullable>enable</Nullable>
+		<LangVersion>12</LangVersion>
+		<Version>1.2.2</Version>
+		<PackageId>ShadowViewer.Controls</PackageId>
+		<Authors>kitUIN</Authors>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/kitUIN/ShadowViewer.Controls</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/kitUIN/ShadowViewer.Controls</RepositoryUrl>
+		<Description>✨ShadowViewer.Controls✨</Description>
+		<Copyright>Copyright 2024-2025</Copyright>
+		<PackageTags>kitUIN;wasdk;ShadowViewer;winui;Controls</PackageTags>
+		<PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentIcons.WinUI" Version="1.1.292" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="$(OutputPath)\net6.0-windows10.0.17763.0\**\*.xbf" Pack="true" PackagePath="lib\net6.0-windows10.0.17763\" />
+		<None Include="$(OutputPath)\net8.0-windows10.0.17763.0\**\*.xbf" Pack="true" PackagePath="lib\net8.0-windows10.0.17763\" />
+		<None Include="$(OutputPath)\net9.0-windows10.0.17763.0\**\*.xbf" Pack="true" PackagePath="lib\net9.0-windows10.0.17763\" />
+	</ItemGroup>
+</Project>

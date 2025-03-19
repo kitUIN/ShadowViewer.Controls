@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:fluentIcon="using:FluentIcon.WinUI"
+    xmlns:fluentIcon="using:FluentIcons.WinUI"
     xmlns:local="using:ShadowViewer.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="Top"
@@ -22,7 +22,7 @@
             Height="{Binding ElementName=Top, Path=ActualHeight}"
             FontSize="{x:Bind FontIconSize}"
             Visibility="Collapsed" />
-        <fluentIcon:FluentRegularIcon
+        <fluentIcon:FluentIcon
             x:Name="FluentRegularIcon"
             Width="{Binding ElementName=Top, Path=ActualWidth}"
             Height="{Binding ElementName=Top, Path=ActualHeight}"
