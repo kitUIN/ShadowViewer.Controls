@@ -12,6 +12,17 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\ARIAL.TTF" />
+    <Content Remove="Assets\ARIALBD.TTF" />
+    <Content Remove="Assets\ARIALBI.TTF" />
+    <Content Remove="Assets\ARIALI.TTF" />
+    <Content Remove="Assets\ARIBLK.TTF" />
+    <Content Remove="Assets\VERDANA.TTF" />
+    <Content Remove="Assets\VERDANAB.TTF" />
+    <Content Remove="Assets\VERDANAI.TTF" />
+    <Content Remove="Assets\VERDANAZ.TTF" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="NotificationPanelPage.xaml" />
   </ItemGroup>
 
