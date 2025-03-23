@@ -5,10 +5,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using Windows.Graphics;
-using Windows.UI;
 using CommunityToolkit.WinUI.Helpers;
 using Microsoft.UI;
 using Microsoft.UI.Input;
@@ -17,7 +15,6 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Media;
-using ShadowViewer.Controls;
 
 namespace ShadowViewer.Controls;
 
@@ -27,7 +24,7 @@ namespace ShadowViewer.Controls;
 public partial class TitleBar
 {
     /// <summary>
-    /// 主题变更事件
+    /// 涓婚鍙樻洿浜嬩欢
     /// </summary>
     public event EventHandler? ThemeChangedEvent;
 

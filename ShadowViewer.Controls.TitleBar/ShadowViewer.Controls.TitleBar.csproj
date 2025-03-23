@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFrameworks>net6.0-windows10.0.19041.0;net8.0-windows10.0.19041.0</TargetFrameworks>
+	  <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
 	  <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
 	  <RootNamespace>ShadowViewer.Controls</RootNamespace>
 	  <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
 	  <UseWinUI>true</UseWinUI>
 	  <Nullable>enable</Nullable>
 	  <LangVersion>12</LangVersion>
-	  <Version>1.1.1</Version>
+	  <Version>1.1.4</Version>
 	  <PackageId>ShadowViewer.Controls.TitleBar</PackageId>
 	  <Authors>kitUIN</Authors>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -15,19 +15,19 @@
 	  <PackageProjectUrl>https://github.com/kitUIN/ShadowViewer.Controls</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/kitUIN/ShadowViewer.Controls</RepositoryUrl>
 	  <Description>✨ TitleBar | ShadowViewer.Controls✨</Description>
-	  <Copyright>Copyright 2024-2024</Copyright>
+	  <Copyright>Copyright 2024-2025</Copyright>
 	  <PackageTags>kitUIN;wasdk;ShadowViewer;winui;titlebar</PackageTags>
 	  <PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
 	  <PackageReference Include="CommunityToolkit.WinUI.Helpers" Version="8.0.240109" />
-	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
-	  <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+	  <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
+	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250205002" />
   </ItemGroup>
 	<ItemGroup>
-		<None Include="$(OutputPath)\net6.0-windows10.0.19041.0\**\*.*" Pack="true" PackagePath="lib\net6.0-windows10.0.19041\" />
-		<None Include="$(OutputPath)\net8.0-windows10.0.19041.0\**\*.*" Pack="true" PackagePath="lib\net8.0-windows10.0.19041\" />
-		<None Include="$(OutputPath)\net9.0-windows10.0.19041.0\**\*.*" Pack="true" PackagePath="lib\net9.0-windows10.0.19041\" />
+		<None Include="$(OutputPath)\**\*.xbf" Pack="true" PackagePath="lib\net8.0-windows10.0.19041\" />
+		<None Include="$(OutputPath)\$(PackageId).pdb" Pack="true" PackagePath="lib\net8.0-windows10.0.19041" />
+
 	</ItemGroup>
 </Project>
