@@ -26,8 +26,8 @@
 	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250205002" />
   </ItemGroup>
 	<ItemGroup>
-		<None Include="$(OutputPath)\**\*.xbf" Pack="true" PackagePath="lib\net8.0-windows10.0.19041\" />
 		<None Include="$(OutputPath)\$(PackageId).pdb" Pack="true" PackagePath="lib\net8.0-windows10.0.19041" />
-
+		<None Include="Build\**" Pack="true" PackagePath="build;buildTransitive" />
+		<None Include="$(OutputPath)\$(PackageId)\**\*.*" Pack="true" PackagePath="contentTransitive/$(PackageId)" />
 	</ItemGroup>
 </Project>

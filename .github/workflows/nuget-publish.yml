@@ -1,0 +1,58 @@
+name: Publish Nuget Packages
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*.*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # 缓存 NuGet 包
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-ShadowViewer.Controls
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: Install .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.x
+          cache: true
+
+      - name: Setup MSBuild.exe
+        uses: microsoft/setup-msbuild@v1.0.2
+        
+      - name: Create NugetPackages
+        run: |
+          cd ..
+          mkdir NugetPackages
+          
+      - name: Build Packages
+        run: |
+          dotnet build ShadowViewer.Controls/ShadowViewer.Controls.csproj -p:Configuration=Release
+          dotnet pack ShadowViewer.Controls/ShadowViewer.Controls.csproj -p:Configuration=Release
+          dotnet build ShadowViewer.Controls.TitleBar/ShadowViewer.Controls.TitleBar.csproj -p:Configuration=Release
+          dotnet pack ShadowViewer.Controls.TitleBar/ShadowViewer.Controls.TitleBar.csproj -p:Configuration=Release
+          dotnet build ShadowViewer.Controls.Notification/ShadowViewer.Controls.Notification.csproj -p:Configuration=Release
+          dotnet pack ShadowViewer.Controls.Notification/ShadowViewer.Controls.Notification.csproj -p:Configuration=Release
+      
+      - name: Push package to Nuget registry
+        run: |
+          cd ..\NugetPackages
+          ls
+          dotnet nuget push "*.nupkg" -s "https://api.nuget.org/v3/index.json" -k $env:NUGET_KEY --skip-duplicate        
+        env:
+          NUGET_KEY: ${{ secrets.NUGET_KEY }}
