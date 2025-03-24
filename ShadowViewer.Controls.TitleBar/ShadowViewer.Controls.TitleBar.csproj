@@ -19,6 +19,7 @@
 	  <PackageTags>kitUIN;wasdk;ShadowViewer;winui;titlebar</PackageTags>
 	  <PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
 	  <PackageReference Include="CommunityToolkit.WinUI.Helpers" Version="8.0.240109" />
