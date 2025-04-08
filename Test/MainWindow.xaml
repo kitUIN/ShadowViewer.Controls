@@ -43,91 +43,98 @@
         <!--             Glyph="&#xE713;" /> -->
         <!--     </Grid>  -->
         <!-- </StackPanel> -->
-        <StackPanel Spacing="5">
-            <scontrols:PingButton PingText="正在 Ping..."
-                                  SuccessText="连接成功！"
-                                  ErrorText="连接失败！" State="Error" Click="myButton_Click">
-            </scontrols:PingButton>
-            <scontrols:PingButton PingText="正在 Ping..."
-                                  SuccessText="连接成功！"
-                                  ErrorText="连接失败！" State="Ping" Click="myButton_Click">
-            </scontrols:PingButton>
-            <scontrols:PingButton PingText="正在 Ping..."
-                                  SuccessText="连接成功！"
-                                  ErrorText="连接失败！" State="Success" Click="myButton_Click">
-            </scontrols:PingButton>
-            <scontrols:ShieldsBadge FontFamily="Verdana,Geneva,DejaVu Sans,sans-serif" VerticalAlignment="Center" HorizontalAlignment="Center" LeftText="license"
-                                    RightText="MIT">
-            </scontrols:ShieldsBadge>
+        <!-- <StackPanel Spacing="5"> -->
+        <!--     <scontrols:PingButton PingText="正在 Ping..." -->
+        <!--                           SuccessText="连接成功！" -->
+        <!--                           ErrorText="连接失败！" State="Error" Click="myButton_Click"> -->
+        <!--     </scontrols:PingButton> -->
+        <!--     <scontrols:PingButton PingText="正在 Ping..." -->
+        <!--                           SuccessText="连接成功！" -->
+        <!--                           ErrorText="连接失败！" State="Ping" Click="myButton_Click"> -->
+        <!--     </scontrols:PingButton> -->
+        <!--     <scontrols:PingButton PingText="正在 Ping..." -->
+        <!--                           SuccessText="连接成功！" -->
+        <!--                           ErrorText="连接失败！" State="Success" Click="myButton_Click"> -->
+        <!--     </scontrols:PingButton> -->
+        <!--     <scontrols:ShieldsBadge FontFamily="Verdana,Geneva,DejaVu Sans,sans-serif" VerticalAlignment="Center" HorizontalAlignment="Center" LeftText="license" -->
+        <!--                             RightText="MIT"> -->
+        <!--     </scontrols:ShieldsBadge> -->
+        <!-- -->
+        <!-- -->
+        <!--     <scontrols:ShieldsBadge Type="FlatSquare" VerticalAlignment="Center" HorizontalAlignment="Center" -->
+        <!--                             LeftText="license" RightText="MIT"> -->
+        <!--     </scontrols:ShieldsBadge> -->
+        <!--     <scontrols:ShieldsBadge Type="Plastic" VerticalAlignment="Center" HorizontalAlignment="Center" -->
+        <!--                             LeftText="license" RightText="MIT"> -->
+        <!--     </scontrols:ShieldsBadge> -->
+        <!--     <scontrols:ShieldsBadge Type="ForTheBadge" VerticalAlignment="Center" HorizontalAlignment="Center" -->
+        <!--                             LeftText="BUILD" RightText="PASSING"> -->
+        <!--     </scontrols:ShieldsBadge> -->
+        <!-- -->
+        <!--     <Grid VerticalAlignment="Center" HorizontalAlignment="Center"> -->
+        <!-- -->
+        <!--         <Border CornerRadius="3"> -->
+        <!--             <Grid> -->
+        <!--                 <Grid.ColumnDefinitions> -->
+        <!--                     <ColumnDefinition Width="*" /> -->
+        <!--                     <ColumnDefinition Width="*" /> -->
+        <!--                 </Grid.ColumnDefinitions> -->
+        <!--                 <Rectangle -->
+        <!--                     Grid.Column="0" -->
+        <!--                     Fill="#555555"> -->
+        <!--                 </Rectangle> -->
+        <!--                 <Rectangle Grid.Column="0"> -->
+        <!--                     <Rectangle.Fill> -->
+        <!--                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1"> -->
+        <!--                             <GradientStop Color="Transparent" Offset="0" /> -->
+        <!--                             <GradientStop Color="#1ABBBBBB" Offset="1" /> -->
+        <!--                         </LinearGradientBrush> -->
+        <!--                     </Rectangle.Fill> -->
+        <!--                 </Rectangle> -->
+        <!--                 <TextBlock Grid.Column="0" Margin="7,4,5,2" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana" -->
+        <!--                            Text="license" -->
+        <!--                            Opacity=".4" -->
+        <!--                            Foreground="#010101" -->
+        <!--                            HorizontalAlignment="Center" -->
+        <!--                            VerticalAlignment="Center"> -->
+        <!--                 </TextBlock> -->
+        <!--                 <TextBlock Grid.Column="0" Margin="7,3,5,3" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana" -->
+        <!--                            Text="license" Foreground="#FFFFFF" -->
+        <!--                            HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
+        <!-- -->
+        <!--                 <Rectangle -->
+        <!--                     Grid.Column="1" -->
+        <!--                     Fill="#88B600"> -->
+        <!--                 </Rectangle> -->
+        <!--                 <Rectangle Grid.Column="1"> -->
+        <!--                     <Rectangle.Fill> -->
+        <!--                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1"> -->
+        <!--                             <GradientStop Color="Transparent" Offset="0" /> -->
+        <!--                             <GradientStop Color="#1ABBBBBB" Offset="1" /> -->
+        <!--                         </LinearGradientBrush> -->
+        <!--                     </Rectangle.Fill> -->
+        <!--                 </Rectangle> -->
+        <!--                 <TextBlock Grid.Column="1" Margin="5,4,7,2" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana" -->
+        <!--                            Text="MIT" -->
+        <!--                            Opacity=".4" -->
+        <!--                            Foreground="#010101" -->
+        <!--                            HorizontalAlignment="Center" -->
+        <!--                            VerticalAlignment="Center"> -->
+        <!--                 </TextBlock> -->
+        <!--                 <TextBlock Grid.Column="1" Margin="5,3,7,3" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana" -->
+        <!--                            Text="MIT" Foreground="#FFFFFF" -->
+        <!--                            HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
+        <!--             </Grid> -->
+        <!-- -->
+        <!--         </Border> -->
+        <!--     </Grid> -->
+        <!-- </StackPanel> -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <scontrols:EditableTextBlock x:Name="Block" Text="点击我编辑" HorizontalAlignment="Center"
+                                         VerticalAlignment="Center" />
+            <TextBlock Text="{x:Bind Block.ActualWidth, Mode=OneWay}"></TextBlock>
+            <TextBlock Text="{x:Bind Block.ActualHeight,Mode=OneWay}"></TextBlock>
 
-
-            <scontrols:ShieldsBadge Type="FlatSquare" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                    LeftText="license" RightText="MIT">
-            </scontrols:ShieldsBadge>
-            <scontrols:ShieldsBadge Type="Plastic" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                    LeftText="license" RightText="MIT">
-            </scontrols:ShieldsBadge>
-            <scontrols:ShieldsBadge Type="ForTheBadge" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                    LeftText="BUILD" RightText="PASSING">
-            </scontrols:ShieldsBadge>
-
-            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-
-                <Border CornerRadius="3">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Rectangle
-                            Grid.Column="0"
-                            Fill="#555555">
-                        </Rectangle>
-                        <Rectangle Grid.Column="0">
-                            <Rectangle.Fill>
-                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                    <GradientStop Color="Transparent" Offset="0" />
-                                    <GradientStop Color="#1ABBBBBB" Offset="1" />
-                                </LinearGradientBrush>
-                            </Rectangle.Fill>
-                        </Rectangle>
-                        <TextBlock Grid.Column="0" Margin="7,4,5,2" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana"
-                                   Text="license"
-                                   Opacity=".4"
-                                   Foreground="#010101"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center">
-                        </TextBlock>
-                        <TextBlock Grid.Column="0" Margin="7,3,5,3" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana"
-                                   Text="license" Foreground="#FFFFFF"
-                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
-
-                        <Rectangle
-                            Grid.Column="1"
-                            Fill="#88B600">
-                        </Rectangle>
-                        <Rectangle Grid.Column="1">
-                            <Rectangle.Fill>
-                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                    <GradientStop Color="Transparent" Offset="0" />
-                                    <GradientStop Color="#1ABBBBBB" Offset="1" />
-                                </LinearGradientBrush>
-                            </Rectangle.Fill>
-                        </Rectangle>
-                        <TextBlock Grid.Column="1" Margin="5,4,7,2" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana"
-                                   Text="MIT"
-                                   Opacity=".4"
-                                   Foreground="#010101"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center">
-                        </TextBlock>
-                        <TextBlock Grid.Column="1" Margin="5,3,7,3" FontFamily="ms-appx:\\\Assets\VERDANA.TTF#Verdana"
-                                   Text="MIT" Foreground="#FFFFFF"
-                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    </Grid>
-
-                </Border>
-            </Grid>
         </StackPanel>
     </Grid>
 </Window>
