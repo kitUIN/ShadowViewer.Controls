@@ -129,8 +129,8 @@
         <!--         </Border> -->
         <!--     </Grid> -->
         <!-- </StackPanel> -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <scontrols:EditableTextBlock x:Name="Block" Text="点击我编辑" HorizontalAlignment="Center"
+        <StackPanel VerticalAlignment="Center" >
+            <scontrols:EditableTextBlock x:Name="Block" Text="点击我编辑"  
                                          VerticalAlignment="Center" />
             <TextBlock Text="{x:Bind Block.ActualWidth, Mode=OneWay}"></TextBlock>
             <TextBlock Text="{x:Bind Block.ActualHeight,Mode=OneWay}"></TextBlock>

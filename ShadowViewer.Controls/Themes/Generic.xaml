@@ -605,12 +605,12 @@
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="PointerOver">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_TextBlockGrid"
                                                                        Storyboard.TargetProperty="Background">
                                             <DiscreteObjectKeyFrame KeyTime="0"
                                                                     Value="{ThemeResource ButtonBackgroundPointerOver}" />
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_TextBlockGrid"
                                                                        Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0"
                                                                     Value="{ThemeResource ButtonBorderBrushPointerOver}" />
@@ -620,13 +620,14 @@
                                 <VisualState x:Name="Editing" />
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Grid x:Name="ContentPresenter"   VerticalAlignment="Center"
+                        <Grid x:Name="PART_TextBlockGrid"   VerticalAlignment="Center"
                               Padding="{TemplateBinding Padding}" >
+                            
                             <TextBlock x:Name="PART_TextBlock" Margin="2,0,28,2"
                                        Text="{TemplateBinding Text}" />
                         </Grid> 
                         <TextBox x:Name="PART_TextBox"
-                                 Text="{TemplateBinding Text}"
+                                 Text="{Binding Text, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" 
                                  VerticalAlignment="Center"
                                  Visibility="Collapsed"/>
                     </Grid>
