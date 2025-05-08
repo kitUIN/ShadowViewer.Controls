@@ -129,12 +129,20 @@
         <!--         </Border> -->
         <!--     </Grid> -->
         <!-- </StackPanel> -->
-        <StackPanel VerticalAlignment="Center" >
-            <scontrols:EditableTextBlock x:Name="Block" Text="点击我编辑"  
-                                         VerticalAlignment="Center" />
-            <TextBlock Text="{x:Bind Block.ActualWidth, Mode=OneWay}"></TextBlock>
-            <TextBlock Text="{x:Bind Block.ActualHeight,Mode=OneWay}"></TextBlock>
-
-        </StackPanel>
+        <!-- <StackPanel VerticalAlignment="Center" Orientation="Vertical" > -->
+        <!--     <scontrols:EditableTextBlock x:Name="Block" Text="点击我编辑"   -->
+        <!--                                  VerticalAlignment="Center" /> -->
+        <!--     ~1~ <TextBlock Text="{x:Bind Block.ActualWidth, Mode=OneWay}"></TextBlock> @1@ -->
+        <!--     ~1~ <TextBlock Text="{x:Bind Block.ActualHeight,Mode=OneWay}"></TextBlock> @1@ -->
+        <!--     <local:AutomationIndicator HorizontalAlignment="Right" Status="{x:Bind Switch.IsOn,Mode=OneWay}" /> -->
+        <!--     <ToggleSwitch x:Name="Switch" ></ToggleSwitch> -->
+        <!-- </StackPanel> -->
+        <scontrols:BreadcrumbBar Height="60" Width="600" ItemsSource="{x:Bind ItemsList}">
+            <scontrols:BreadcrumbBar.ItemTemplate>
+                <DataTemplate x:DataType="local:PathBoxItem">
+                    <scontrols:BreadcrumbBarItem Content="{x:Bind Title,Mode=OneWay}" />
+                </DataTemplate>
+            </scontrols:BreadcrumbBar.ItemTemplate>
+        </scontrols:BreadcrumbBar>
     </Grid>
 </Window>

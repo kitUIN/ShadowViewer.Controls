@@ -23,6 +23,7 @@
     <Content Remove="Assets\VERDANAZ.TTF" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="AutomationIndicator.xaml" />
     <None Remove="NotificationPanelPage.xaml" />
   </ItemGroup>
 
@@ -57,6 +58,11 @@
     <Reference Include="FluentIcons.WinUI">
       <HintPath>C:\Users\15854\.nuget\packages\fluenticons.winui\1.1.292\lib\net6.0-windows10.0.17763\FluentIcons.WinUI.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AutomationIndicator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="NotificationPanelPage.xaml">

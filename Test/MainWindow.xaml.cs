@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using ShadowViewer.Controls;
@@ -8,11 +10,24 @@ using InfoBar = Microsoft.UI.Xaml.Controls.InfoBar;
 
 namespace Test
 {
+    public sealed class PathBoxItem
+    {
+        public string Title { get; set; }
+
+        public string Path { get; set; }
+    }
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public ObservableCollection<PathBoxItem> ItemsList =
+        [
+            new PathBoxItem{Title = "Home"},
+            new PathBoxItem{Title = "Download"},
+            new PathBoxItem{Title = "Desktop"},
+            new PathBoxItem{Title = "Folder"},
+        ];
         public MainWindow()
         {
             this.InitializeComponent();
