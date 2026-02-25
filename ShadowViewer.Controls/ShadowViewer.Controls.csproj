@@ -8,7 +8,7 @@
 		<UseWinUI>true</UseWinUI>
 		<Nullable>enable</Nullable>
 		<LangVersion>13</LangVersion>
-		<Version>1.4.1</Version>
+		<Version>1.4.2</Version>
 		<PackageId>ShadowViewer.Controls</PackageId>
 		<Authors>kitUIN</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,7 +16,7 @@
 		<PackageProjectUrl>https://github.com/kitUIN/ShadowViewer.Controls</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/kitUIN/ShadowViewer.Controls</RepositoryUrl>
 		<Description>✨ShadowViewer.Controls✨</Description>
-		<Copyright>Copyright 2024-2025</Copyright>
+		<Copyright>Copyright 2024-2026</Copyright>
 		<PackageTags>kitUIN;wasdk;ShadowViewer;winui;Controls</PackageTags>
 		<PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>

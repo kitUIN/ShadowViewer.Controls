@@ -17,7 +17,7 @@ public class EnumMenuFlyout : MenuFlyout
     /// <summary>
     /// 
     /// </summary>
-    public EnumMenuFlyout() : base()
+    public EnumMenuFlyout()
     {
     }
 
@@ -26,7 +26,7 @@ public class EnumMenuFlyout : MenuFlyout
     /// 
     /// </summary>
     public static readonly DependencyProperty DefaultStyleProperty =
-        DependencyProperty.RegisterAttached(
+        DependencyProperty.Register(
             nameof(DefaultStyle),
             typeof(Style),
             typeof(EnumMenuFlyout),
@@ -45,7 +45,7 @@ public class EnumMenuFlyout : MenuFlyout
     /// 
     /// </summary>
     public static readonly DependencyProperty TextConverterProperty =
-        DependencyProperty.RegisterAttached(
+        DependencyProperty.Register(
             nameof(TextConverter),
             typeof(IValueConverter),
             typeof(EnumMenuFlyout),
@@ -65,7 +65,7 @@ public class EnumMenuFlyout : MenuFlyout
     /// 
     /// </summary>
     public static readonly DependencyProperty EnumSourceProperty =
-        DependencyProperty.RegisterAttached(
+        DependencyProperty.Register(
             nameof(EnumSource),
             typeof(Type),
             typeof(EnumMenuFlyout),
@@ -74,9 +74,9 @@ public class EnumMenuFlyout : MenuFlyout
     /// <summary>
     /// 
     /// </summary>
-    public Type EnumSource
+    public Type? EnumSource
     {
-        get => (Type)GetValue(EnumSourceProperty);
+        get => (Type?)GetValue(EnumSourceProperty);
         set => SetValue(EnumSourceProperty, value);
     }
 
@@ -128,7 +128,7 @@ public class EnumMenuFlyout : MenuFlyout
     /// 
     /// </summary>
     public static readonly DependencyProperty EnumCommandProperty =
-        DependencyProperty.RegisterAttached(
+        DependencyProperty.Register(
             nameof(EnumCommand),
             typeof(System.Windows.Input.ICommand),
             typeof(EnumMenuFlyout),
@@ -147,8 +147,8 @@ public class EnumMenuFlyout : MenuFlyout
     /// 
     /// </summary>
     public static readonly DependencyProperty SelectedValueProperty =
-        DependencyProperty.RegisterAttached(
-            "SelectedValue",
+        DependencyProperty.Register(
+            nameof(SelectedValue),
             typeof(object),
             typeof(EnumMenuFlyout),
             new PropertyMetadata(null, OnSelectedValueChanged));
@@ -158,7 +158,7 @@ public class EnumMenuFlyout : MenuFlyout
     /// </summary>
     public object SelectedValue
     {
-        get => (object)GetValue(SelectedValueProperty);
+        get => GetValue(SelectedValueProperty);
         set => SetValue(SelectedValueProperty, value);
     }
 
