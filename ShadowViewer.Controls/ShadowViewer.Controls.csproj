@@ -9,7 +9,7 @@
 		<UseWinUI>true</UseWinUI>
 		<Nullable>enable</Nullable>
 		<LangVersion>13</LangVersion>
-		<Version>1.4.3</Version>
+		<Version>1.4.4</Version>
 		<PackageId>ShadowViewer.Controls</PackageId>
 		<Authors>kitUIN</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -21,6 +21,7 @@
 		<PackageTags>kitUIN;wasdk;ShadowViewer;winui;Controls</PackageTags>
 		<PackageOutputPath>..\..\..\NugetPackages</PackageOutputPath>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackControlResources</TargetsForTfmSpecificContentInPackage>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Labs.WinUI.DependencyPropertyGenerator" Version="0.1.250319-build.2093" />
@@ -29,6 +30,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="$(OutputPath)\**\*.xbf" Pack="true" PackagePath="lib\net8.0-windows10.0.19041\" />
+		<None Include="ShadowViewer.Controls.targets" Pack="true" PackagePath="buildTransitive" />
 	</ItemGroup>
+	<Target Name="PackControlResources">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="$(OutputPath)$(AssemblyName)\**\*.xbf"
+				PackagePath="content\$(AssemblyName)\%(RecursiveDir)" />
+			<TfmSpecificPackageFile Include="$(OutputPath)$(AssemblyName).pri"
+				PackagePath="lib\net8.0-windows10.0.19041" />
+		</ItemGroup>
+	</Target>
 </Project>
