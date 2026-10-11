@@ -1,9 +1,0 @@
-<Project>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)..\content\ShadowViewer.Controls\**\*.xbf">
-      <Link>ShadowViewer.Controls\%(RecursiveDir)%(Filename)%(Extension)</Link>
-      <TargetPath>ShadowViewer.Controls\%(RecursiveDir)%(Filename)%(Extension)</TargetPath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-</Project>

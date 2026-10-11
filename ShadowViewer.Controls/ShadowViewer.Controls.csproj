@@ -9,7 +9,7 @@
 		<UseWinUI>true</UseWinUI>
 		<Nullable>enable</Nullable>
 		<LangVersion>13</LangVersion>
-		<Version>1.4.4</Version>
+		<Version>1.4.5</Version>
 		<PackageId>ShadowViewer.Controls</PackageId>
 		<Authors>kitUIN</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -29,13 +29,9 @@
 		<PackageReference Include="CommunityToolkit.WinUI.Extensions" Version="8.0.230907" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<None Include="ShadowViewer.Controls.targets" Pack="true" PackagePath="buildTransitive" />
-	</ItemGroup>
 	<Target Name="PackControlResources">
 		<ItemGroup>
-			<TfmSpecificPackageFile Include="$(OutputPath)$(AssemblyName)\**\*.xbf"
-				PackagePath="content\$(AssemblyName)\%(RecursiveDir)" />
+			<!-- WinUI embeds the compiled XAML in this PRI. Shipping loose XBF too causes duplicate resource keys. -->
 			<TfmSpecificPackageFile Include="$(OutputPath)$(AssemblyName).pri"
 				PackagePath="lib\net8.0-windows10.0.19041" />
 		</ItemGroup>
