@@ -1,0 +1,50 @@
+<UserControl
+    x:Class="ShadowViewer.Controls.HelpFlyoutButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    IsTabStop="False"
+    Unloaded="OnUnloaded">
+    <Button
+        x:Name="HelpButton"
+        Width="32"
+        Height="32"
+        Padding="0"
+        Background="Transparent"
+        BorderThickness="0"
+        Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+        AutomationProperties.Name="{x:Bind AccessibleName, Mode=OneWay}"
+        Click="OnClick"
+        KeyDown="OnKeyDown"
+        PointerEntered="OnButtonPointerEntered"
+        PointerExited="OnButtonPointerExited">
+        <Button.Resources>
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent" />
+            <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent" />
+        </Button.Resources>
+        <FontIcon FontSize="18" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" Glyph="&#xE946;" />
+        <FlyoutBase.AttachedFlyout>
+            <Flyout
+                x:Name="HelpFlyout"
+                AreOpenCloseAnimationsEnabled="False"
+                ShouldConstrainToRootBounds="True"
+                Opened="OnFlyoutOpened"
+                Closed="OnFlyoutClosed">
+                <Flyout.FlyoutPresenterStyle>
+                    <Style TargetType="FlyoutPresenter">
+                        <Setter Property="CornerRadius" Value="8" />
+                        <Setter Property="Margin" Value="0" />
+                        <Setter Property="MinWidth" Value="0" />
+                        <Setter Property="MinHeight" Value="0" />
+                        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+                        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+                    </Style>
+                </Flyout.FlyoutPresenterStyle>
+                <ContentPresenter
+                    x:Name="HelpContentPresenter"
+                    Content="{x:Bind FlyoutContent, Mode=OneWay}"
+                    ContentTemplate="{x:Bind FlyoutContentTemplate, Mode=OneWay}" />
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
+    </Button>
+</UserControl>
